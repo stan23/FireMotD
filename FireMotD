@@ -4,7 +4,7 @@
 # Created on:   10/02/2014
 # Author:       Willem D'Haese
 # Purpose:      Bash script which enables dynamic MotD messages
-# On GitHub:    https://github.com/OutsideIT/FireMotD
+# On GitHub:    https://github.com/OutsideIT/FireMotD, https://github.com/stan23/FireMotD
 # On OutsideIT: https://outsideit.net/FireMotD
 # Copyright:
 # This program is free software: you can redistribute it and/or modify it
@@ -16,6 +16,9 @@
 # Public License for more details. You should have received a copy of the
 # GNU General Public License along with this program.  If not, see
 # <http://www.gnu.org/licenses/>.
+#
+# History: 
+# 2024-05-09, stan23: changed URLs to point to the fork
 
 Debug=0
 Verbose=0
@@ -1824,19 +1827,19 @@ InstallFireMotD () {
   mkdir -m 0775 -p /usr/share/firemotd/cache
   chmod 0775 /usr/share/firemotd/cache
   WriteLog Verbose Info "Downloading themes"
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Blanco.json > /usr/share/firemotd/themes/FireMotD-theme-Blanco.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Blue.json > /usr/share/firemotd/themes/FireMotD-theme-Blue.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Digipolis.json > /usr/share/firemotd/themes/FireMotD-theme-Digipolis.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Elastic.json > /usr/share/firemotd/themes/FireMotD-theme-Elastic.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Eline.json > /usr/share/firemotd/themes/FireMotD-theme-Eline.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Gray.json > /usr/share/firemotd/themes/FireMotD-theme-Gray.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Modern.json > /usr/share/firemotd/themes/FireMotD-theme-Modern.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Red.json > /usr/share/firemotd/themes/FireMotD-theme-Red.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Orange.json > /usr/share/firemotd/themes/FireMotD-theme-Orange.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/themes/FireMotD-theme-Zebra.json > /usr/share/firemotd/themes/FireMotD-theme-Zebra.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Blanco.json > /usr/share/firemotd/themes/FireMotD-theme-Blanco.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Blue.json > /usr/share/firemotd/themes/FireMotD-theme-Blue.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Digipolis.json > /usr/share/firemotd/themes/FireMotD-theme-Digipolis.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Elastic.json > /usr/share/firemotd/themes/FireMotD-theme-Elastic.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Eline.json > /usr/share/firemotd/themes/FireMotD-theme-Eline.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Gray.json > /usr/share/firemotd/themes/FireMotD-theme-Gray.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Modern.json > /usr/share/firemotd/themes/FireMotD-theme-Modern.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Red.json > /usr/share/firemotd/themes/FireMotD-theme-Red.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Orange.json > /usr/share/firemotd/themes/FireMotD-theme-Orange.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/themes/FireMotD-theme-Zebra.json > /usr/share/firemotd/themes/FireMotD-theme-Zebra.json
   WriteLog Verbose Info "Downloading templates"
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/templates/FireMotD-template-all.json > /usr/share/firemotd/templates/FireMotD-template-all.json
-  curl -s https://raw.githubusercontent.com/OutsideIT/FireMotD/master/templates/FireMotD-template-basic.json > /usr/share/firemotd/templates/FireMotD-template-basic.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/templates/FireMotD-template-all.json > /usr/share/firemotd/templates/FireMotD-template-all.json
+  curl -s https://raw.githubusercontent.com/stan23/FireMotD/master/templates/FireMotD-template-basic.json > /usr/share/firemotd/templates/FireMotD-template-basic.json
   WriteLog Verbose Info "Copying $(readlink -f "$0") to /usr/local/bin/FireMotD"
   cp "$(readlink -f "$0")" "/usr/local/bin/FireMotD"
   chmod 0775 "/usr/local/bin/FireMotD"
